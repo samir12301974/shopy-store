@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Key Clicker — Твой идеальный антистресс</title>
+    <!-- Подключаем Tailwind CSS для красивого дизайна -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; }
+        .neon-text { text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff; }
+        .neon-border { border: 1px solid #00f2ff; box-shadow: 0 0 15px rgba(0, 242, 255, 0.3); }
+        .gradient-btn { background: linear-gradient(90deg, #00f2ff, #7000ff); }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <nav class="p-5 flex justify-between items-center border-b border-gray-800">
+        <h1 class="text-xl font-bold tracking-tighter neon-text">CLICK<span class="text-white">HUB</span></h1>
+        <div class="text-xs bg-gray-900 px-3 py-1 rounded-full border border-gray-700 text-green-400 font-medium">● В наличии в ЕС/США</div>
+    </nav>
+
+    <!-- Главный блок -->
+    <section class="px-6 py-12 text-center max-w-md mx-auto">
+        <div class="mb-6 inline-block p-2 rounded-2xl bg-gray-900 neon-border">
+            <!-- Временная заглушка для фото товара -->
+            <div class="w-64 h-64 bg-gray-800 rounded-xl flex flex-col items-center justify-center text-gray-500 p-4">
+                <span class="text-4xl mb-2">🕹️</span>
+                <span class="text-xs text-center">Здесь будет гифка или фото кликера в темноте</span>
+            </div>
+        </div>
+        
+        <h2 class="text-4xl font-black mb-4 tracking-tight">ТОТ САМЫЙ <br><span class="text-[#00f2ff]">RGB КЛИКЕР</span></h2>
+        <p class="text-gray-400 mb-8 text-sm leading-relaxed">Приятный звук механического переключателя (Blue Switch), яркая подсветка при каждом нажатии и бесконечный антистресс в твоем кармане.</p>
+        
+        <!-- Кнопка заказа -->
+        <div class="flex flex-col gap-3">
+            <!-- ВАЖНО: Замени "твой_логин_телеграм" в ссылке ниже на свой реальный ник без знака @ -->
+            <a href="https://t.me/твой_логин_телеграм?text=Привет!%20Хочу%20заказать%20RGB%20Key%20Clicker.%20Подскажи%20детали%20доставки." 
+               target="_blank" 
+               class="gradient-btn py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition block text-center uppercase tracking-wider">
+                👉 ЗАКАЗАТЬ — $9.99
+            </a>
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest">⚡ Оплата в USDT / Картой. Быстрая отправка.</p>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="px-6 py-10 bg-gray-900/30 border-t border-b border-gray-800">
+        <div class="max-w-md mx-auto grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-black border border-gray-800">
+                <div class="text-2xl mb-2">🔊</div>
+                <h3 class="font-bold text-sm text-white">Blue Switch</h3>
+                <p class="text-xs text-gray-500 mt-1">Максимально сочный и громкий щелчок механики</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black border border-gray-800">
+                <div class="text-2xl mb-2">🌈</div>
+                <h3 class="font-bold text-sm text-white">RGB Light</h3>
+                <p class="text-xs text-gray-500 mt-1">Яркий светодиод внутри реагирует на нажатие</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как это работает для дропшиппинга -->
+    <section class="px-6 py-10 max-w-md mx-auto text-left text-sm text-gray-400">
+        <h4 class="font-bold text-white mb-3 text-center uppercase tracking-wider text-xs text-[#00f2ff]">Как сделать заказ:</h4>
+        <ol class="list-decimal list-inside space-y-2 text-xs">
+            <li>Нажми на кнопку заказа выше, чтобы перейти в чат поддержки.</li>
+            <li>Укажи свою страну и адрес для расчета доставки.</li>
+            <li>Оплати заказ удобным способом (Крипта/Перевод).</li>
+            <li>Получи трек-номер посылки в течение 24 часов.</li>
+        </ol>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="p-8 text-center text-gray-600 text-[10px] uppercase tracking-widest border-t border-gray-900">
+        <p>© 2026 CLICKHUB Store. Global Shipping.</p>
+    </footer>
+
+</body>
+</html>
