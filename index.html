@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URBAN VOID</title>
+    <title>URBAN VOID | Premium Store</title>
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; padding-bottom: 80px; }
-        header { padding: 20px; text-align: center; font-weight: bold; border-bottom: 1px solid #333; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; }
-        .card { background: #111; padding: 10px; border-radius: 8px; text-align: center; }
-        .card img { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; }
-        .footer { position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; background: #000; border-top: 1px solid #333; padding: 15px 0; }
+        body { background: #000; color: #fff; font-family: 'Arial', sans-serif; margin: 0; padding-bottom: 100px; }
+        header { padding: 25px; text-align: center; font-weight: bold; font-size: 1.5rem; border-bottom: 1px solid #222; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; }
+        .card { background: #111; padding: 10px; border-radius: 12px; text-align: center; border: 1px solid #222; }
+        .card img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 8px; }
+        h2 { font-size: 0.75rem; margin: 5px 0; color: #eee; }
+        .price { font-size: 0.85rem; color: #888; font-weight: bold; }
+        /* Футер с кнопками */
+        .footer-nav { position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; background: #050505; padding: 20px 0; border-top: 1px solid #333; z-index: 100; }
+        .footer-nav a { color: #fff; text-decoration: none; font-size: 1.4rem; }
+        /* Презентация внизу */
+        .presentation { padding: 40px 20px; text-align: center; border-top: 1px solid #222; margin-top: 20px; color: #666; font-size: 0.9rem; }
     </style>
 </head>
 <body>
+
 <header>URBAN VOID</header>
-<div class="grid">
-    <div class="card"><img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7"><h2>HOODIE</h2><p>$85</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1544923246-77be07ef3443"><h2>JACKET</h2><p>$120</p></div>
+
+<div class="grid" id="catalog">
+    <!-- Скрипт создаст 30 товаров -->
+    <script>
+        const items = ["MEN HOODIE", "WOMEN HOODIE", "RUNNING SNEAKERS", "LEATHER BAG", "CARGO PANTS", "DENIM JACKET", "BASIC TEE", "WOOL SOCKS", "BASEBALL CAP", "CROSSBODY BAG", "CHINO PANTS", "WINTER JACKET", "OVERSIZED TEE", "SPORT SOCKS", "BEANIE", "LOAFERS", "CLUTCH BAG", "TRACK PANTS", "BOMBER JACKET", "GRAPHIC TEE", "ANKLE SOCKS", "BUCKET HAT", "TOTE BAG", "SLIM JEANS", "PUFFER JACKET", "POLO SHIRT", "KNEE SOCKS", "SNAPBACK", "MESSENGER BAG", "FORMAL BOOTS"];
+        for(let i=0; i<30; i++) {
+            document.write(`<div class="card"><img src="https://picsum.photos/300/300?random=${i}"><h2>${items[i]}</h2><p class="price">$${(Math.random()*150+25).toFixed(0)}</p></div>`);
+        }
+    </script>
 </div>
-<div class="footer">
-    <div>🏠</div><div>🛍️</div><div>🛒</div><div>👤</div>
+
+<div class="presentation">
+    <h3>URBAN VOID™</h3>
+    <p>Индустриальная эстетика в каждой детали.<br>Доставка по всему миру.</p>
 </div>
+
+<nav class="footer-nav">
+    <a href="#">🏠</a>
+    <a href="#">🛍️</a>
+    <a href="#">🛒</a>
+    <a href="#">👤</a>
+</nav>
+
 </body>
 </html>
-
 
