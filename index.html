@@ -5,70 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBAN VOID | Store</title>
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 20px; }
-        header { text-align: center; padding: 40px 0; border-bottom: 1px solid #222; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; padding: 40px 0; max-width: 1000px; margin: 0 auto; }
-        .card { background: #161616; border: 1px solid #333; padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; }
-        .card:hover { border-color: #555; }
-        .card img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-        h2 { font-size: 1.1rem; margin: 10px 0; }
-        .price { color: #aaa; margin-bottom: 15px; font-weight: bold; }
-        .btn-placeholder { background: #fff; color: #000; padding: 10px 20px; border-radius: 5px; font-size: 12px; text-transform: uppercase; cursor: pointer; display: inline-block; }
+        body { background: #0a0a0a; color: #fff; font-family: 'Helvetica Neue', sans-serif; margin: 0; padding-bottom: 70px; }
+        header { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid #222; align-items: center; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
+        .card { background: #161616; border: 1px solid #333; padding: 10px; border-radius: 10px; text-align: center; }
+        .card img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; }
+        h2 { font-size: 0.9rem; margin: 10px 0 5px; }
+        .price { color: #888; font-size: 0.85rem; margin-bottom: 10px; }
+        .btn { background: #fff; color: #000; border: none; padding: 8px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        .footer-nav { position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; background: #111; padding: 15px 0; border-top: 1px solid #333; font-size: 0.7rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>URBAN VOID</h1>
+    <div>≡</div>
+    <div style="font-weight: bold; font-size: 1.2rem; letter-spacing: 2px;">URBAN VOID</div>
+    <div>🛒</div>
 </header>
 
 <div class="grid">
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7" alt="Hoodie">
-        <h2>VOID-01 HOODIE</h2>
-        <p class="price">$85</p>
-        <div class="btn-placeholder">Скоро в наличии</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7e803" alt="Jacket">
-        <h2>STRUCT JACKET</h2>
-        <p class="price">$120</p>
-        <div class="btn-placeholder">Скоро в наличии</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1" alt="Tee">
-        <h2>CORE TEE</h2>
-        <p class="price">$45</p>
-        <div class="btn-placeholder">Скоро в наличии</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b" alt="Cargo">
-        <h2>CARO CARGO PANTS</h2>
-        <p class="price">$95</p>
-        <div class="btn-placeholder">Скоро в наличии</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1581605405669-f1481c57c18b" alt="Bag">
-        <h2>VOID UTILITY BAG</h2>
-        <p class="price">$35</p>
-        <div class="btn-placeholder">Скоро в наличии</div>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1577401138243-7f9754f9104c" alt="Belt">
-        <h2>TECH TAPE BELT</h2>
-        <p class="price">$30</p>
-        <div class="btn-placeholder">Скоро в наличии</div>
-    </div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7"><h2>VOID-01 HOODIE</h2><p class="price">$85</p><button class="btn">VIEW</button></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1624378439575-d8705ad7e803"><h2>STRUCT JACKET</h2><p class="price">$120</p><button class="btn">VIEW</button></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1"><h2>CORE TEE</h2><p class="price">$45</p><button class="btn">VIEW</button></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b"><h2>CARO CARGO</h2><p class="price">$95</p><button class="btn">VIEW</button></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1581605405669-f1481c57c18b"><h2>UTILITY BAG</h2><p class="price">$35</p><button class="btn">VIEW</button></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1577401138243-7f9754f9104c"><h2>TECH BELT</h2><p class="price">$30</p><button class="btn">VIEW</button></div>
 </div>
+
+<nav class="footer-nav">
+    <div>🏠 HOME</div>
+    <div>🛍️ SHOP</div>
+    <div>🛒 CART</div>
+    <div>👤 ACCOUNT</div>
+</nav>
 
 </body>
 </html>
-
 
 
 
