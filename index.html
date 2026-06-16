@@ -2,59 +2,48 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URBAN VOID | Shop</title>
+    <title>URBAN VOID | Official Store</title>
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; padding-bottom: 100px; }
-        header { padding: 25px; text-align: center; font-weight: bold; font-size: 1.5rem; border-bottom: 1px solid #222; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; }
-        .card { background: #111; padding: 10px; border-radius: 12px; text-align: center; border: 1px solid #222; }
-        .card img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 8px; }
-        h2 { font-size: 0.75rem; margin: 5px 0; color: #eee; }
-        .price { font-size: 0.85rem; color: #888; font-weight: bold; }
-        .footer-nav { position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-around; background: #050505; padding: 20px 0; border-top: 1px solid #333; z-index: 100; }
-        .footer-nav a { color: #fff; text-decoration: none; font-size: 1.4rem; }
-        .presentation { padding: 30px; text-align: center; color: #666; font-size: 0.8rem; }
+        body { background: #000; color: #fff; font-family: sans-serif; margin: 0; padding-bottom: 80px; }
+        header { padding: 20px; text-align: center; border-bottom: 1px solid #333; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
+        .card { background: #111; padding: 10px; border-radius: 12px; border: 1px solid #333; cursor: pointer; transition: 0.3s; }
+        .card:hover { border-color: #fff; }
+        .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+        h2 { font-size: 0.8rem; margin: 10px 0 5px; }
+        .price { color: #888; font-size: 0.9rem; margin-bottom: 10px; }
+        
+        /* Скрытая форма PayPal */
+        .cart-btn { background: #ffc439; color: #000; border: none; padding: 10px; width: 100%; font-weight: bold; border-radius: 5px; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <header>URBAN VOID</header>
 
-<div class="grid" id="catalog">
-    <script>
-        const products = [
-            {n: "MEN HOODIE", i: "photo-1556821840-3a63f95609a7", p: 170}, {n: "WOMEN HOODIE", i: "photo-1620799140408-edc6dcb6d633", p: 84},
-            {n: "SNEAKERS", i: "photo-1542291026-7eec264c27ff", p: 74}, {n: "LEATHER BAG", i: "photo-1548036328-c9fa89d128fa", p: 46},
-            {n: "CARGO PANTS", i: "photo-1594633312681-425c7b97ccd1", p: 95}, {n: "DENIM JACKET", i: "photo-1523275335684-37898b6baf30", p: 120},
-            {n: "BASIC TEE", i: "photo-1521572267360-ee0c2909d518", p: 35}, {n: "WOOL SOCKS", i: "photo-1597045566677-8cf032ed6546", p: 15},
-            {n: "BASEBALL CAP", i: "photo-1588850561407-ed78c282e89b", p: 25}, {n: "CROSSBODY BAG", i: "photo-1590874103328-e638a600371c", p: 55},
-            {n: "CHINO PANTS", i: "photo-1473966968600-fa8db1d85608", p: 60}, {n: "WINTER JACKET", i: "photo-1539109136881-3be0616acf4b", p: 150},
-            {n: "OVERSIZED TEE", i: "photo-1583743814966-8936f5b7be1a", p: 40}, {n: "SPORT SOCKS", i: "photo-1586350977771-b3b0abd5028b", p: 12},
-            {n: "BEANIE", i: "photo-1576871337622-98d48d12e353", p: 20}, {n: "LOAFERS", i: "photo-1614676471925-512962338102", p: 110},
-            {n: "CLUTCH BAG", i: "photo-1553062407-98eeb64c6a62", p: 45}, {n: "TRACK PANTS", i: "photo-1512374382149-def33c105838", p: 50},
-            {n: "BOMBER JACKET", i: "photo-1591047139829-d91aecb6caea", p: 130}, {n: "GRAPHIC TEE", i: "photo-1503342217505-b0a15ec3261c", p: 30},
-            {n: "ANKLE SOCKS", i: "photo-1600185365483-26d7a4cc7519", p: 10}, {n: "BUCKET HAT", i: "photo-1596451130701-f1737e8c3321", p: 22},
-            {n: "TOTE BAG", i: "photo-1597484662884-633814674753", p: 35}, {n: "SLIM JEANS", i: "photo-1542272604-787c3835535d", p: 70},
-            {n: "PUFFER JACKET", i: "photo-1551028719-00167b16eac8", p: 160}, {n: "POLO SHIRT", i: "photo-1598033129183-c4fb50c739f5", p: 45},
-            {n: "KNEE SOCKS", i: "photo-1595273672314-e22934f8a846", p: 18}, {n: "SNAPBACK", i: "photo-1533488765986-dfa2a7935766", p: 28},
-            {n: "MESSENGER BAG", i: "photo-1553062407-98eeb64c6a62", p: 65}, {n: "FORMAL BOOTS", i: "photo-1605342885994-01046904664c", p: 140}
-        ];
-        products.forEach(item => {
-            document.write(`<div class="card"><img src="https://images.unsplash.com/${item.i}?w=400"><h2>${item.n}</h2><p class="price">$${item.p}</p></div>`);
-        });
-    </script>
+<div class="grid" id="shop">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7">
+        <h2>VOID HOODIE</h2>
+        <p class="price">$85.00</p>
+        <button class="cart-btn" onclick="alert('Переход к оплате PayPal')">BUY NOW</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+        <h2>URBAN SNEAKERS</h2>
+        <p class="price">$120.00</p>
+        <button class="cart-btn" onclick="alert('Переход к оплате PayPal')">BUY NOW</button>
+    </div>
 </div>
 
-<div class="presentation">
-    <p>URBAN VOID™ — Индустриальная эстетика.<br>Все права защищены © 2026</p>
-</div>
-
-<nav class="footer-nav">
-    <a href="#">🏠</a><a href="#">🛍️</a><a href="#">🛒</a><a href="#">👤</a>
+<nav style="position:fixed; bottom:0; width:100%; display:flex; justify-content:space-around; background:#000; padding:15px 0; border-top:1px solid #333;">
+    <span>🏠</span><span>🛍️</span><span>🛒</span><span>👤</span>
 </nav>
+
+<script>
+    // Здесь будет логика корзины в будущем
+</script>
 
 </body>
 </html>
-
-
